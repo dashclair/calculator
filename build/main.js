@@ -9,6 +9,50 @@
 /******/ (() => { // webpackBootstrap
 /******/ 	var __webpack_modules__ = ({
 
+/***/ "./src/exponentiation/square.js":
+/*!**************************************!*\
+  !*** ./src/exponentiation/square.js ***!
+  \**************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"default\": () => (__WEBPACK_DEFAULT_EXPORT__)\n/* harmony export */ });\nconst square = firstNum => {\n  return parseFloat(firstNum) ** 2;\n};\n/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (square);\n\n//# sourceURL=webpack://calculator/./src/exponentiation/square.js?");
+
+/***/ }),
+
+/***/ "./src/exponentiation/tenthExponentiation.js":
+/*!***************************************************!*\
+  !*** ./src/exponentiation/tenthExponentiation.js ***!
+  \***************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"default\": () => (__WEBPACK_DEFAULT_EXPORT__)\n/* harmony export */ });\nconst tenthExponentiation = firstNum => {\n  return 10 ** parseFloat(firstNum);\n};\n/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (tenthExponentiation);\n\n//# sourceURL=webpack://calculator/./src/exponentiation/tenthExponentiation.js?");
+
+/***/ }),
+
+/***/ "./src/exponentiation/thirdExponentiation.js":
+/*!***************************************************!*\
+  !*** ./src/exponentiation/thirdExponentiation.js ***!
+  \***************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"default\": () => (__WEBPACK_DEFAULT_EXPORT__)\n/* harmony export */ });\nconst thirdExponentiation = firstNum => {\n  if (typeof firstNum === 'number') {\n    console.log('firstNum', firstNum);\n    return firstNum ** 3;\n  }\n  return parseFloat(firstNum) ** 3;\n};\n/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (thirdExponentiation);\n\n//# sourceURL=webpack://calculator/./src/exponentiation/thirdExponentiation.js?");
+
+/***/ }),
+
+/***/ "./src/exponentiation/xyExponentiation.js":
+/*!************************************************!*\
+  !*** ./src/exponentiation/xyExponentiation.js ***!
+  \************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"default\": () => (__WEBPACK_DEFAULT_EXPORT__)\n/* harmony export */ });\nconst xyExponentiation = (firstNum, secondNum) => {\n  return parseFloat(firstNum) ** secondNum;\n};\n/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (xyExponentiation);\n\n//# sourceURL=webpack://calculator/./src/exponentiation/xyExponentiation.js?");
+
+/***/ }),
+
 /***/ "./src/index.js":
 /*!**********************!*\
   !*** ./src/index.js ***!
@@ -16,7 +60,115 @@
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
 "use strict";
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _styles_css__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./styles.css */ \"./src/styles.css\");\n/* harmony import */ var _theme_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./theme.js */ \"./src/theme.js\");\n/* harmony import */ var _theme_js__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(_theme_js__WEBPACK_IMPORTED_MODULE_1__);\n\n\nlet firstNum = \"\";\nlet secondNum = \"\";\nlet operator = \"\";\nlet result = \"\";\nlet memory = 0;\nlet isNegative = false;\nconst buttons = document.querySelector(\".buttons\");\nconst display = document.querySelector(\".display\");\n\n// clearing\nconst clearAll = () => {\n  firstNum = \"\";\n  secondNum = \"\";\n  operator = \"\";\n  result = \"\";\n  isNegative = false;\n  display.textContent = \"\";\n};\nconst deletePreviousSymbol = () => {\n  if (typeof firstNum === \"number\") {\n    firstNum = \"\";\n  }\n  if (secondNum !== \"\") {\n    secondNum = secondNum.slice(0, -1);\n  } else if (operator !== \"\") {\n    operator = \"\";\n  } else if (firstNum !== \"\") {\n    firstNum = firstNum.slice(0, -1);\n  }\n  isNegative = false;\n  display.textContent = display.textContent.slice(0, -1);\n  return;\n};\n\n// operations\n\nconst add = () => {\n  result = parseFloat(firstNum) + parseFloat(secondNum);\n};\nconst subtract = () => {\n  result = parseFloat(firstNum) - parseFloat(secondNum);\n};\nconst multiply = () => {\n  result = parseFloat(firstNum) * parseFloat(secondNum);\n};\nconst devide = () => {\n  if (secondNum === \"0\") {\n    return result = \"Error\";\n  } else {\n    result = parseFloat(firstNum) / parseFloat(secondNum);\n  }\n};\nconst factorialize = () => {\n  if (firstNum > 10) {\n    clearAll();\n    result = 'Error';\n    return;\n  }\n  if (firstNum === \"\" || firstNum === \"0\" || firstNum === 0 || firstNum === 1 || firstNum < 0) {\n    firstNum = 1;\n  } else {\n    for (let i = firstNum - 1; i >= 1; i--) {\n      firstNum *= i;\n    }\n  }\n  result = firstNum;\n  return result;\n};\nconst oneDevideX = () => {\n  result = 1 / parseFloat(firstNum);\n};\nconst calcPercents = () => {\n  result = firstNum / 100;\n};\n\n// degrees\n\nconst square = () => {\n  result = parseFloat(firstNum) ** 2;\n};\nconst thirdExponentiation = () => {\n  result = parseFloat(firstNum) ** 3;\n};\nconst tenthExponentiation = () => {\n  result = 10 ** parseFloat(firstNum);\n};\nconst xyExponentiation = () => {\n  result = parseFloat(firstNum) ** secondNum;\n};\n\n// roots\n\nconst rootY = () => {\n  result = parseFloat(firstNum) ** parseFloat(1 / secondNum);\n};\nconst sqrRoot = () => {\n  if (typeof firstNum === 'number') {\n    result = firstNum ** 0.5;\n  } else {\n    result = parseInt(firstNum) ** 0.5;\n  }\n};\nconst cubeRoot = () => {\n  console.log(firstNum);\n  if (typeof firstNum === 'number') {\n    result = firstNum ** (1 / 3);\n  } else {\n    result = parseFloat(firstNum) ** (1 / 3);\n  }\n};\n\n// memory operations\nconst memoryClear = () => {\n  memory = 0;\n};\nconst memoryAdd = () => {\n  if (firstNum === \"\") {\n    return memory;\n  }\n  if (secondNum !== \"\") {\n    return memory += parseFloat(secondNum);\n  }\n  memory += parseFloat(firstNum);\n};\nconst memoryRecall = () => {\n  if (memory === 0) {\n    return firstNum = \"\";\n  }\n  operator !== \"\" ? secondNum = memory : firstNum = memory;\n  console.log(memory);\n};\nconst memorySubtract = () => {\n  if (memory === \"\" || memory === 0) {\n    return \"\";\n  }\n  if (secondNum !== \"\") {\n    memory -= parseFloat(secondNum);\n  } else {\n    memory -= parseFloat(firstNum);\n  }\n};\nconst memoryOperation = operation => {\n  switch (operation) {\n    case \"MC\":\n      memoryClear();\n      break;\n    case \"M+\":\n      memoryAdd();\n      break;\n    case \"M-\":\n      memorySubtract();\n      break;\n    case \"MR\":\n      memoryRecall();\n      break;\n    default:\n      break;\n  }\n};\n\n// operations\n\nbuttons.addEventListener(\"click\", event => {\n  const displayNumbers = () => {\n    if (!secondNum && operator === \"\") {\n      if (isNegative && firstNum === \"\") {\n        firstNum = \"-\" + event.target.textContent;\n      } else {\n        firstNum === \"\" || firstNum === 0 || result === 0 ? firstNum = event.target.textContent : firstNum += event.target.textContent;\n      }\n    } else {\n      secondNum += event.target.textContent;\n    }\n  };\n  const changingSign = () => {\n    if (result < 0) {\n      result = result.toString();\n      result = result.slice(1);\n      firstNum = result;\n      display.textContent = result;\n      return firstNum;\n    } else if (result > 0) {\n      result = result.toString();\n      isNegative = true;\n      firstNum = \"-\" + result;\n      return display.textContent = firstNum;\n    } else if (firstNum && !isNegative) {\n      isNegative = true;\n      firstNum = \"-\" + firstNum;\n    } else if (firstNum && isNegative) {\n      isNegative = false;\n      result = result.toString();\n      firstNum = firstNum.slice(1);\n    }\n    display.textContent = firstNum;\n  };\n  const complexOpeartions = () => {\n    switch (operator) {\n      case \"+\":\n        add();\n        break;\n      case \"-\":\n        subtract();\n        break;\n      case \"x\":\n        multiply();\n        break;\n      case \"/\":\n        devide();\n        break;\n      case \"xy\":\n        event.target.textContent === operator ? display.textContent = firstNum : display.textContent = secondNum;\n        return xyExponentiation();\n      case \"root y\":\n        event.target.textContent === operator ? display.textContent = firstNum : display.textContent = secondNum;\n        console.log(\"first num\", firstNum);\n        return rootY();\n      case \"x!\":\n        factorialize();\n        return display.textContent = result;\n      default:\n        break;\n    }\n  };\n\n  // setting restriction for clicking not a button\n  if (!event.target.matches(\".buttons__operation, .buttons__numbers, .buttons__memory, .buttons__degree, .buttons__root, .buttons__degree\")) return;\n\n  // clearing the display and store on AC btn\n  if (event.target.dataset.clear) {\n    return clearAll();\n  }\n\n  // deleting previous character on C btn\n  if (event.target.dataset.deleteprev) {\n    return deletePreviousSymbol();\n  }\n\n  // storing and displaying the numbers\n  if (event.target.classList.contains(\"buttons__numbers\")) {\n    displayNumbers();\n  }\n\n  // operators\n  if (event.target.classList.contains(\"buttons__operation\")) {\n    // checking empty operators\n    if (firstNum === \"\" && event.target.textContent !== \"-\") {\n      return \"\";\n    }\n\n    // setting isNegative after clicling -\n    if (event.target.textContent === \"-\" && firstNum === \"\") {\n      isNegative = true;\n      return;\n    }\n\n    // calculation\n    if (secondNum !== \"\" && operator !== \"\" && !event.target.dataset.deleteprev) {\n      firstNum = result;\n      secondNum = \"\";\n      isNegative = false;\n      if (event.target.textContent === \"=\") {\n        operator = \"\";\n        return display.textContent = firstNum;\n      }\n    }\n    if (event.target.dataset.devidex) {\n      oneDevideX();\n      firstNum = result;\n      return display.textContent = firstNum;\n    }\n\n    // change sign\n    if (event.target.dataset.changesign) {\n      changingSign();\n      return;\n    }\n\n    // percentage\n    if (event.target.dataset.percents) {\n      calcPercents();\n      firstNum = result;\n      return display.textContent = firstNum;\n    }\n    operator = event.target.textContent;\n  }\n\n  // sqr, cube and tenth\n  if (event.target.classList.contains(\"buttons__degree\")) {\n    if (!firstNum) {\n      clearAll();\n      return display.textContent = \"Error\";\n    }\n    // x2\n    if (event.target.dataset.square) {\n      square();\n    }\n\n    // x3\n    if (event.target.dataset.third) {\n      thirdExponentiation();\n    }\n\n    // 10x\n    if (event.target.dataset.tenth) {\n      tenthExponentiation();\n    }\n    firstNum = result;\n    return display.textContent = firstNum;\n  }\n\n  // roots\n  if (event.target.classList.contains(\"buttons__root\")) {\n    if (isNegative || !firstNum || firstNum < 0) {\n      console.log(firstNum);\n      clearAll();\n      return display.textContent = \"Error\";\n    }\n    if (event.target.dataset.rootsqr) {\n      sqrRoot();\n    }\n    if (event.target.dataset.rootcube) {\n      cubeRoot();\n    }\n    firstNum = result;\n    return display.textContent = firstNum;\n  }\n  if (event.target.dataset.rooty) {\n    return operator = event.target.dataset.rooty;\n  }\n\n  // memory operations\n  if (event.target.classList.contains(\"buttons__memory\")) {\n    memoryOperation(event.target.textContent);\n  }\n  display.textContent = firstNum + operator + secondNum;\n  complexOpeartions();\n});\n\n//# sourceURL=webpack://calculator/./src/index.js?");
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _styles_css__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./styles.css */ \"./src/styles.css\");\n/* harmony import */ var _theme_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./theme.js */ \"./src/theme.js\");\n/* harmony import */ var _theme_js__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(_theme_js__WEBPACK_IMPORTED_MODULE_1__);\n/* harmony import */ var _operations_add_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./operations/add.js */ \"./src/operations/add.js\");\n/* harmony import */ var _operations_add_js__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(_operations_add_js__WEBPACK_IMPORTED_MODULE_2__);\n/* harmony import */ var _operations_subtract_js__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./operations/subtract.js */ \"./src/operations/subtract.js\");\n/* harmony import */ var _operations_multiply_js__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./operations/multiply.js */ \"./src/operations/multiply.js\");\n/* harmony import */ var _operations_devide_js__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./operations/devide.js */ \"./src/operations/devide.js\");\n/* harmony import */ var _operations_oneDevideX_js__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ./operations/oneDevideX.js */ \"./src/operations/oneDevideX.js\");\n/* harmony import */ var _operations_calcPercents_js__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ./operations/calcPercents.js */ \"./src/operations/calcPercents.js\");\n/* harmony import */ var _operations_factorialize_js__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ./operations/factorialize.js */ \"./src/operations/factorialize.js\");\n/* harmony import */ var _operations_factorialize_js__WEBPACK_IMPORTED_MODULE_8___default = /*#__PURE__*/__webpack_require__.n(_operations_factorialize_js__WEBPACK_IMPORTED_MODULE_8__);\n/* harmony import */ var _roots_sqrRoot_js__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! ./roots/sqrRoot.js */ \"./src/roots/sqrRoot.js\");\n/* harmony import */ var _roots_cubeRoot_js__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! ./roots/cubeRoot.js */ \"./src/roots/cubeRoot.js\");\n/* harmony import */ var _roots_rootY_js__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(/*! ./roots/rootY.js */ \"./src/roots/rootY.js\");\n/* harmony import */ var _exponentiation_square_js__WEBPACK_IMPORTED_MODULE_12__ = __webpack_require__(/*! ./exponentiation/square.js */ \"./src/exponentiation/square.js\");\n/* harmony import */ var _exponentiation_thirdExponentiation_js__WEBPACK_IMPORTED_MODULE_13__ = __webpack_require__(/*! ./exponentiation/thirdExponentiation.js */ \"./src/exponentiation/thirdExponentiation.js\");\n/* harmony import */ var _exponentiation_tenthExponentiation_js__WEBPACK_IMPORTED_MODULE_14__ = __webpack_require__(/*! ./exponentiation/tenthExponentiation.js */ \"./src/exponentiation/tenthExponentiation.js\");\n/* harmony import */ var _exponentiation_xyExponentiation_js__WEBPACK_IMPORTED_MODULE_15__ = __webpack_require__(/*! ./exponentiation/xyExponentiation.js */ \"./src/exponentiation/xyExponentiation.js\");\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nlet firstNum = \"\";\nlet secondNum = \"\";\nlet operator = \"\";\nlet result = \"\";\nlet memory = 0;\nlet isNegative = false;\nconst buttons = document.querySelector(\".buttons\");\nconst display = document.querySelector(\".display\");\n\n// clearing\nconst clearAll = () => {\n  firstNum = \"\";\n  secondNum = \"\";\n  operator = \"\";\n  result = \"\";\n  isNegative = false;\n  display.textContent = \"\";\n};\nconst deletePreviousSymbol = () => {\n  if (typeof firstNum === \"number\") {\n    firstNum = \"\";\n  }\n  if (secondNum !== \"\") {\n    secondNum = secondNum.slice(0, -1);\n  } else if (operator !== \"\") {\n    operator = \"\";\n  } else if (firstNum !== \"\") {\n    firstNum = firstNum.slice(0, -1);\n  }\n  isNegative = false;\n  display.textContent = display.textContent.slice(0, -1);\n  return;\n};\n\n// memory operations\nconst memoryClear = () => {\n  memory = 0;\n};\nconst memoryAdd = () => {\n  if (firstNum === \"\") {\n    return memory;\n  }\n  if (secondNum !== \"\") {\n    return memory += parseFloat(secondNum);\n  }\n  memory += parseFloat(firstNum);\n};\nconst memoryRecall = () => {\n  if (memory === 0) {\n    return firstNum = \"\";\n  }\n  operator !== \"\" ? secondNum = memory : firstNum = memory;\n  console.log(memory);\n};\nconst memorySubtract = () => {\n  if (memory === \"\" || memory === 0) {\n    return \"\";\n  }\n  if (secondNum !== \"\") {\n    memory -= parseFloat(secondNum);\n  } else {\n    memory -= parseFloat(firstNum);\n  }\n};\nconst memoryOperation = operation => {\n  switch (operation) {\n    case \"MC\":\n      memoryClear();\n      break;\n    case \"M+\":\n      memoryAdd();\n      break;\n    case \"M-\":\n      memorySubtract();\n      break;\n    case \"MR\":\n      memoryRecall();\n      break;\n    default:\n      break;\n  }\n};\nbuttons.addEventListener(\"click\", event => {\n  const complexOpeartions = () => {\n    switch (operator) {\n      case \"+\":\n        result = _operations_add_js__WEBPACK_IMPORTED_MODULE_2___default()(firstNum, secondNum);\n        break;\n      case \"-\":\n        result = (0,_operations_subtract_js__WEBPACK_IMPORTED_MODULE_3__[\"default\"])(firstNum, secondNum);\n        break;\n      case \"x\":\n        result = (0,_operations_multiply_js__WEBPACK_IMPORTED_MODULE_4__[\"default\"])(firstNum, secondNum);\n        break;\n      case \"/\":\n        result = (0,_operations_devide_js__WEBPACK_IMPORTED_MODULE_5__[\"default\"])(firstNum, secondNum);\n        break;\n      case \"xy\":\n        event.target.textContent === operator ? display.textContent = firstNum : display.textContent = secondNum;\n        result = (0,_exponentiation_xyExponentiation_js__WEBPACK_IMPORTED_MODULE_15__[\"default\"])(firstNum, secondNum);\n        return result;\n      case \"root y\":\n        event.target.textContent === operator ? display.textContent = firstNum : display.textContent = secondNum;\n        if (isNegative) {\n          result = \"Error\";\n        } else {\n          result = (0,_roots_rootY_js__WEBPACK_IMPORTED_MODULE_11__[\"default\"])(firstNum, secondNum);\n        }\n        return result;\n      case \"x!\":\n        if (firstNum > 10) {\n          clearAll();\n          return \"Error\";\n        } else {\n          result = _operations_factorialize_js__WEBPACK_IMPORTED_MODULE_8___default()(firstNum);\n        }\n        firstNum = result;\n        return display.textContent = firstNum;\n      default:\n        break;\n    }\n  };\n\n  // setting restriction for clicking not a button\n  if (!event.target.matches(\".buttons__operation, .buttons__numbers, .buttons__memory, .buttons__degree, .buttons__root, .buttons__degree\")) return;\n\n  // clearing the display and store on AC btn\n  if (event.target.dataset.clear) {\n    return clearAll();\n  }\n\n  // deleting previous character on C btn\n  if (event.target.dataset.deleteprev) {\n    return deletePreviousSymbol();\n  }\n\n  // storing and displaying the numbers\n  if (event.target.classList.contains(\"buttons__numbers\")) {\n    if (!secondNum && operator === \"\") {\n      if (isNegative && firstNum === \"\") {\n        firstNum = \"-\" + event.target.textContent;\n      } else {\n        firstNum === \"\" || firstNum === 0 || result === 0 ? firstNum = event.target.textContent : firstNum += event.target.textContent;\n      }\n    } else {\n      secondNum += event.target.textContent;\n    }\n  }\n\n  // operators\n  if (event.target.classList.contains(\"buttons__operation\")) {\n    // checking empty operators\n    if (firstNum === \"\" && event.target.textContent !== \"-\") {\n      return \"\";\n    }\n\n    // setting isNegative after clicling -\n    if (event.target.textContent === \"-\" && firstNum === \"\") {\n      isNegative = true;\n      return;\n    }\n\n    // calculation\n    if (secondNum !== \"\" && operator !== \"\" && !event.target.dataset.deleteprev) {\n      firstNum = result;\n      secondNum = \"\";\n      isNegative = false;\n      if (event.target.textContent === \"=\") {\n        operator = \"\";\n        return display.textContent = firstNum;\n      }\n    }\n    if (event.target.dataset.devidex) {\n      result = (0,_operations_oneDevideX_js__WEBPACK_IMPORTED_MODULE_6__[\"default\"])(firstNum);\n      firstNum = result;\n      return display.textContent = firstNum;\n    }\n    if (event.target.dataset.percents) {\n      result = (0,_operations_calcPercents_js__WEBPACK_IMPORTED_MODULE_7__[\"default\"])(firstNum);\n      firstNum = result;\n      return display.textContent = firstNum;\n    }\n\n    // change sign\n    if (event.target.dataset.changesign) {\n      if (result < 0) {\n        result = result.toString();\n        result = result.slice(1);\n        firstNum = result;\n        display.textContent = result;\n        return firstNum;\n      } else if (result > 0) {\n        result = result.toString();\n        isNegative = true;\n        firstNum = \"-\" + result;\n        return display.textContent = firstNum;\n      } else if (firstNum && !isNegative) {\n        isNegative = true;\n        firstNum = \"-\" + firstNum;\n      } else if (firstNum && isNegative) {\n        isNegative = false;\n        result = result.toString();\n        firstNum = firstNum.slice(1);\n      }\n      return display.textContent = firstNum;\n    }\n    operator = event.target.textContent;\n  }\n  if (event.target.classList.contains(\"buttons__degree\")) {\n    if (!firstNum) {\n      clearAll();\n      return display.textContent = \"Error\";\n    }\n    if (event.target.dataset.square) {\n      result = (0,_exponentiation_square_js__WEBPACK_IMPORTED_MODULE_12__[\"default\"])(firstNum);\n    }\n    if (event.target.dataset.third) {\n      result = (0,_exponentiation_thirdExponentiation_js__WEBPACK_IMPORTED_MODULE_13__[\"default\"])(firstNum);\n    }\n    if (event.target.dataset.tenth) {\n      result = (0,_exponentiation_tenthExponentiation_js__WEBPACK_IMPORTED_MODULE_14__[\"default\"])(firstNum);\n    }\n    firstNum = result;\n    console.log(firstNum);\n    return display.textContent = firstNum;\n  }\n  if (event.target.classList.contains(\"buttons__root\")) {\n    if (isNegative || !firstNum || firstNum < 0) {\n      clearAll();\n      return display.textContent = \"Error\";\n    }\n    if (event.target.dataset.rootsqr) {\n      result = (0,_roots_sqrRoot_js__WEBPACK_IMPORTED_MODULE_9__[\"default\"])(firstNum);\n    }\n    if (event.target.dataset.rootcube) {\n      result = (0,_roots_cubeRoot_js__WEBPACK_IMPORTED_MODULE_10__[\"default\"])(firstNum);\n    }\n    firstNum = result;\n    return display.textContent = firstNum;\n  }\n  if (event.target.dataset.rooty) {\n    return operator = event.target.dataset.rooty;\n  }\n  if (event.target.classList.contains(\"buttons__memory\")) {\n    memoryOperation(event.target.textContent);\n  }\n  display.textContent = firstNum + operator + secondNum;\n  complexOpeartions();\n});\n\n//# sourceURL=webpack://calculator/./src/index.js?");
+
+/***/ }),
+
+/***/ "./src/operations/add.js":
+/*!*******************************!*\
+  !*** ./src/operations/add.js ***!
+  \*******************************/
+/***/ ((module) => {
+
+eval("const add = (firstVal, secondVal) => {\n  console.log(firstVal);\n  return parseFloat(firstVal) + parseFloat(secondVal);\n};\nmodule.exports = add;\n\n//# sourceURL=webpack://calculator/./src/operations/add.js?");
+
+/***/ }),
+
+/***/ "./src/operations/calcPercents.js":
+/*!****************************************!*\
+  !*** ./src/operations/calcPercents.js ***!
+  \****************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"default\": () => (__WEBPACK_DEFAULT_EXPORT__)\n/* harmony export */ });\nconst calcPercents = firstNum => {\n  return firstNum / 100;\n};\n/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (calcPercents);\n\n//# sourceURL=webpack://calculator/./src/operations/calcPercents.js?");
+
+/***/ }),
+
+/***/ "./src/operations/devide.js":
+/*!**********************************!*\
+  !*** ./src/operations/devide.js ***!
+  \**********************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"default\": () => (__WEBPACK_DEFAULT_EXPORT__)\n/* harmony export */ });\nconst devide = (firstNum, secondNum) => {\n  if (secondNum === \"0\") {\n    return \"Error\";\n  } else {\n    return parseFloat(firstNum) / parseFloat(secondNum);\n  }\n};\n/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (devide);\n\n//# sourceURL=webpack://calculator/./src/operations/devide.js?");
+
+/***/ }),
+
+/***/ "./src/operations/factorialize.js":
+/*!****************************************!*\
+  !*** ./src/operations/factorialize.js ***!
+  \****************************************/
+/***/ ((module) => {
+
+eval("const factorialize = firstNum => {\n  if (!firstNum || firstNum === \"0\" || firstNum === 0 || firstNum === 1) {\n    firstNum = 1;\n  } else if (firstNum < 0) {\n    firstNum = 'Error';\n  } else {\n    for (let i = firstNum - 1; i >= 1; i--) {\n      firstNum *= i;\n    }\n  }\n  return firstNum;\n  ;\n};\nmodule.exports = factorialize;\n\n//# sourceURL=webpack://calculator/./src/operations/factorialize.js?");
+
+/***/ }),
+
+/***/ "./src/operations/multiply.js":
+/*!************************************!*\
+  !*** ./src/operations/multiply.js ***!
+  \************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"default\": () => (__WEBPACK_DEFAULT_EXPORT__)\n/* harmony export */ });\nconst multiply = (firstVal, secondVal) => {\n  return parseFloat(firstVal) * parseFloat(secondVal);\n};\n/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (multiply);\n\n//# sourceURL=webpack://calculator/./src/operations/multiply.js?");
+
+/***/ }),
+
+/***/ "./src/operations/oneDevideX.js":
+/*!**************************************!*\
+  !*** ./src/operations/oneDevideX.js ***!
+  \**************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"default\": () => (__WEBPACK_DEFAULT_EXPORT__)\n/* harmony export */ });\nconst oneDevideX = firstNum => {\n  return 1 / parseFloat(firstNum);\n};\n/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (oneDevideX);\n\n//# sourceURL=webpack://calculator/./src/operations/oneDevideX.js?");
+
+/***/ }),
+
+/***/ "./src/operations/subtract.js":
+/*!************************************!*\
+  !*** ./src/operations/subtract.js ***!
+  \************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"default\": () => (__WEBPACK_DEFAULT_EXPORT__)\n/* harmony export */ });\nconst subtract = (firstVal, secondVal) => {\n  return parseFloat(firstVal) - parseFloat(secondVal);\n};\n/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (subtract);\n\n//# sourceURL=webpack://calculator/./src/operations/subtract.js?");
+
+/***/ }),
+
+/***/ "./src/roots/cubeRoot.js":
+/*!*******************************!*\
+  !*** ./src/roots/cubeRoot.js ***!
+  \*******************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"default\": () => (__WEBPACK_DEFAULT_EXPORT__)\n/* harmony export */ });\nconst cubeRoot = firstNum => {\n  console.log(firstNum);\n  if (typeof firstNum === \"number\") {\n    return firstNum ** (1 / 3);\n  } else {\n    return parseFloat(firstNum) ** (1 / 3);\n  }\n};\n/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (cubeRoot);\n\n//# sourceURL=webpack://calculator/./src/roots/cubeRoot.js?");
+
+/***/ }),
+
+/***/ "./src/roots/rootY.js":
+/*!****************************!*\
+  !*** ./src/roots/rootY.js ***!
+  \****************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"default\": () => (__WEBPACK_DEFAULT_EXPORT__)\n/* harmony export */ });\nconst rootY = (firstNum, secondNum) => {\n  return parseFloat(firstNum) ** (1 / parseFloat(secondNum));\n};\n/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (rootY);\n\n//# sourceURL=webpack://calculator/./src/roots/rootY.js?");
+
+/***/ }),
+
+/***/ "./src/roots/sqrRoot.js":
+/*!******************************!*\
+  !*** ./src/roots/sqrRoot.js ***!
+  \******************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"default\": () => (__WEBPACK_DEFAULT_EXPORT__)\n/* harmony export */ });\nconst sqrRoot = firstNum => {\n  if (typeof firstNum === \"number\") {\n    return firstNum ** 0.5;\n  } else {\n    return parseInt(firstNum) ** 0.5;\n  }\n};\n/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (sqrRoot);\n\n//# sourceURL=webpack://calculator/./src/roots/sqrRoot.js?");
 
 /***/ }),
 
