@@ -129,6 +129,7 @@ const sqrRoot = () => {
 };
 
 const cubeRoot = () => {
+    console.log(firstNum)
     if(typeof firstNum === 'number') {
         result = firstNum ** (1/3);
     } else {
@@ -367,7 +368,7 @@ buttons.addEventListener("click", (event) => {
 
     // roots
     if (event.target.classList.contains("buttons__root")) {
-        if (isNegative || !firstNum) {
+        if (isNegative || !firstNum || firstNum < 0) {
             console.log(firstNum);
             clearAll();
             return (display.textContent = "Error");
