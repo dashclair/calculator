@@ -9,6 +9,46 @@
 /******/ (() => { // webpackBootstrap
 /******/ 	var __webpack_modules__ = ({
 
+/***/ "./src/exponentiation/square.js":
+/*!**************************************!*\
+  !*** ./src/exponentiation/square.js ***!
+  \**************************************/
+/***/ ((module) => {
+
+eval("const square = firstNum => {\n  console.log(firstNum);\n  return parseFloat(firstNum) ** 2;\n};\nmodule.exports = square;\n\n//# sourceURL=webpack://calculator/./src/exponentiation/square.js?");
+
+/***/ }),
+
+/***/ "./src/exponentiation/tenthExponentiation.js":
+/*!***************************************************!*\
+  !*** ./src/exponentiation/tenthExponentiation.js ***!
+  \***************************************************/
+/***/ ((module) => {
+
+eval("const tenthExponentiation = firstNum => {\n  return 10 ** parseFloat(firstNum);\n};\nmodule.exports = tenthExponentiation;\n\n//# sourceURL=webpack://calculator/./src/exponentiation/tenthExponentiation.js?");
+
+/***/ }),
+
+/***/ "./src/exponentiation/thirdExponentiation.js":
+/*!***************************************************!*\
+  !*** ./src/exponentiation/thirdExponentiation.js ***!
+  \***************************************************/
+/***/ ((module) => {
+
+eval("const thirdExponentiation = firstNum => {\n  if (typeof firstNum === \"number\") {\n    firstNum = firstNum ** 3;\n    return firstNum;\n  }\n  firstNum = parseFloat(firstNum) ** 3;\n  return firstNum;\n};\nmodule.exports = thirdExponentiation;\n\n//# sourceURL=webpack://calculator/./src/exponentiation/thirdExponentiation.js?");
+
+/***/ }),
+
+/***/ "./src/exponentiation/xyExponentiation.js":
+/*!************************************************!*\
+  !*** ./src/exponentiation/xyExponentiation.js ***!
+  \************************************************/
+/***/ ((module) => {
+
+eval("const xyExponentiation = (firstNum, secondNum) => {\n  return parseFloat(firstNum) ** secondNum;\n};\nmodule.exports = xyExponentiation;\n\n//# sourceURL=webpack://calculator/./src/exponentiation/xyExponentiation.js?");
+
+/***/ }),
+
 /***/ "./src/index.js":
 /*!**********************!*\
   !*** ./src/index.js ***!
@@ -16,7 +56,107 @@
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
 "use strict";
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _styles_css__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./styles.css */ \"./src/styles.css\");\n/* harmony import */ var _theme_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./theme.js */ \"./src/theme.js\");\n/* harmony import */ var _theme_js__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(_theme_js__WEBPACK_IMPORTED_MODULE_1__);\n\n\n\n//# sourceURL=webpack://calculator/./src/index.js?");
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _styles_css__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./styles.css */ \"./src/styles.css\");\n/* harmony import */ var _theme_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./theme.js */ \"./src/theme.js\");\n/* harmony import */ var _theme_js__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(_theme_js__WEBPACK_IMPORTED_MODULE_1__);\n/* harmony import */ var _operations_add_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./operations/add.js */ \"./src/operations/add.js\");\n/* harmony import */ var _operations_add_js__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(_operations_add_js__WEBPACK_IMPORTED_MODULE_2__);\n/* harmony import */ var _operations_subtract_js__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./operations/subtract.js */ \"./src/operations/subtract.js\");\n/* harmony import */ var _operations_subtract_js__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(_operations_subtract_js__WEBPACK_IMPORTED_MODULE_3__);\n/* harmony import */ var _operations_multiply_js__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./operations/multiply.js */ \"./src/operations/multiply.js\");\n/* harmony import */ var _operations_multiply_js__WEBPACK_IMPORTED_MODULE_4___default = /*#__PURE__*/__webpack_require__.n(_operations_multiply_js__WEBPACK_IMPORTED_MODULE_4__);\n/* harmony import */ var _operations_devide_js__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./operations/devide.js */ \"./src/operations/devide.js\");\n/* harmony import */ var _operations_devide_js__WEBPACK_IMPORTED_MODULE_5___default = /*#__PURE__*/__webpack_require__.n(_operations_devide_js__WEBPACK_IMPORTED_MODULE_5__);\n/* harmony import */ var _operations_oneDevideX_js__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ./operations/oneDevideX.js */ \"./src/operations/oneDevideX.js\");\n/* harmony import */ var _operations_oneDevideX_js__WEBPACK_IMPORTED_MODULE_6___default = /*#__PURE__*/__webpack_require__.n(_operations_oneDevideX_js__WEBPACK_IMPORTED_MODULE_6__);\n/* harmony import */ var _operations_calcPercents_js__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ./operations/calcPercents.js */ \"./src/operations/calcPercents.js\");\n/* harmony import */ var _operations_calcPercents_js__WEBPACK_IMPORTED_MODULE_7___default = /*#__PURE__*/__webpack_require__.n(_operations_calcPercents_js__WEBPACK_IMPORTED_MODULE_7__);\n/* harmony import */ var _operations_factorialize_js__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ./operations/factorialize.js */ \"./src/operations/factorialize.js\");\n/* harmony import */ var _operations_factorialize_js__WEBPACK_IMPORTED_MODULE_8___default = /*#__PURE__*/__webpack_require__.n(_operations_factorialize_js__WEBPACK_IMPORTED_MODULE_8__);\n/* harmony import */ var _roots_sqrRoot_js__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! ./roots/sqrRoot.js */ \"./src/roots/sqrRoot.js\");\n/* harmony import */ var _roots_sqrRoot_js__WEBPACK_IMPORTED_MODULE_9___default = /*#__PURE__*/__webpack_require__.n(_roots_sqrRoot_js__WEBPACK_IMPORTED_MODULE_9__);\n/* harmony import */ var _roots_cubeRoot_js__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! ./roots/cubeRoot.js */ \"./src/roots/cubeRoot.js\");\n/* harmony import */ var _roots_cubeRoot_js__WEBPACK_IMPORTED_MODULE_10___default = /*#__PURE__*/__webpack_require__.n(_roots_cubeRoot_js__WEBPACK_IMPORTED_MODULE_10__);\n/* harmony import */ var _roots_rootY_js__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(/*! ./roots/rootY.js */ \"./src/roots/rootY.js\");\n/* harmony import */ var _roots_rootY_js__WEBPACK_IMPORTED_MODULE_11___default = /*#__PURE__*/__webpack_require__.n(_roots_rootY_js__WEBPACK_IMPORTED_MODULE_11__);\n/* harmony import */ var _exponentiation_square_js__WEBPACK_IMPORTED_MODULE_12__ = __webpack_require__(/*! ./exponentiation/square.js */ \"./src/exponentiation/square.js\");\n/* harmony import */ var _exponentiation_square_js__WEBPACK_IMPORTED_MODULE_12___default = /*#__PURE__*/__webpack_require__.n(_exponentiation_square_js__WEBPACK_IMPORTED_MODULE_12__);\n/* harmony import */ var _exponentiation_thirdExponentiation_js__WEBPACK_IMPORTED_MODULE_13__ = __webpack_require__(/*! ./exponentiation/thirdExponentiation.js */ \"./src/exponentiation/thirdExponentiation.js\");\n/* harmony import */ var _exponentiation_thirdExponentiation_js__WEBPACK_IMPORTED_MODULE_13___default = /*#__PURE__*/__webpack_require__.n(_exponentiation_thirdExponentiation_js__WEBPACK_IMPORTED_MODULE_13__);\n/* harmony import */ var _exponentiation_tenthExponentiation_js__WEBPACK_IMPORTED_MODULE_14__ = __webpack_require__(/*! ./exponentiation/tenthExponentiation.js */ \"./src/exponentiation/tenthExponentiation.js\");\n/* harmony import */ var _exponentiation_tenthExponentiation_js__WEBPACK_IMPORTED_MODULE_14___default = /*#__PURE__*/__webpack_require__.n(_exponentiation_tenthExponentiation_js__WEBPACK_IMPORTED_MODULE_14__);\n/* harmony import */ var _exponentiation_xyExponentiation_js__WEBPACK_IMPORTED_MODULE_15__ = __webpack_require__(/*! ./exponentiation/xyExponentiation.js */ \"./src/exponentiation/xyExponentiation.js\");\n/* harmony import */ var _exponentiation_xyExponentiation_js__WEBPACK_IMPORTED_MODULE_15___default = /*#__PURE__*/__webpack_require__.n(_exponentiation_xyExponentiation_js__WEBPACK_IMPORTED_MODULE_15__);\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nlet firstNum = \"\";\nlet secondNum = \"\";\nlet operator = \"\";\nlet result = \"\";\nlet memory = 0;\nlet isNegative = false;\nconst buttons = document.querySelector(\".buttons\");\nconst display = document.querySelector(\".display\");\n\n// clearing\nconst clearAll = () => {\n  firstNum = \"\";\n  secondNum = \"\";\n  operator = \"\";\n  result = \"\";\n  isNegative = false;\n  display.textContent = \"\";\n};\nconst deletePreviousSymbol = () => {\n  if (typeof firstNum === \"number\") {\n    firstNum = \"\";\n  }\n  if (secondNum !== \"\") {\n    secondNum = secondNum.slice(0, -1);\n  } else if (operator !== \"\") {\n    operator = \"\";\n  } else if (firstNum !== \"\") {\n    firstNum = firstNum.slice(0, -1);\n  }\n  isNegative = false;\n  display.textContent = display.textContent.slice(0, -1);\n  return;\n};\n\n// memory operations\nconst memoryClear = () => {\n  memory = 0;\n};\nconst memoryAdd = () => {\n  if (firstNum === \"\") {\n    return memory;\n  }\n  if (secondNum !== \"\") {\n    return memory += parseFloat(secondNum);\n  }\n  memory += parseFloat(firstNum);\n};\nconst memoryRecall = () => {\n  if (memory === 0) {\n    return firstNum = \"\";\n  }\n  operator !== \"\" ? secondNum = memory : firstNum = memory;\n  console.log(memory);\n};\nconst memorySubtract = () => {\n  if (memory === \"\" || memory === 0) {\n    return \"\";\n  }\n  if (secondNum) {\n    memory -= parseFloat(secondNum);\n  } else {\n    memory -= parseFloat(firstNum);\n  }\n};\nconst memoryOperation = operation => {\n  switch (operation) {\n    case \"MC\":\n      memoryClear();\n      break;\n    case \"M+\":\n      memoryAdd();\n      break;\n    case \"M-\":\n      memorySubtract();\n      break;\n    case \"MR\":\n      memoryRecall();\n      break;\n    default:\n      break;\n  }\n};\nbuttons.addEventListener(\"click\", event => {\n  const complexOpeartions = () => {\n    switch (operator) {\n      case \"+\":\n        result = _operations_add_js__WEBPACK_IMPORTED_MODULE_2___default()(firstNum, secondNum);\n        break;\n      case \"-\":\n        result = _operations_subtract_js__WEBPACK_IMPORTED_MODULE_3___default()(firstNum, secondNum);\n        break;\n      case \"x\":\n        result = _operations_multiply_js__WEBPACK_IMPORTED_MODULE_4___default()(firstNum, secondNum);\n        break;\n      case \"/\":\n        result = _operations_devide_js__WEBPACK_IMPORTED_MODULE_5___default()(firstNum, secondNum);\n        break;\n      case \"xy\":\n        event.target.textContent === operator ? display.textContent = firstNum : display.textContent = secondNum;\n        result = _exponentiation_xyExponentiation_js__WEBPACK_IMPORTED_MODULE_15___default()(firstNum, secondNum);\n        return result;\n      case \"root y\":\n        event.target.textContent === operator ? display.textContent = firstNum : display.textContent = secondNum;\n        if (isNegative) {\n          result = \"Error\";\n        } else {\n          result = _roots_rootY_js__WEBPACK_IMPORTED_MODULE_11___default()(firstNum, secondNum);\n        }\n        return result;\n      case \"x!\":\n        if (firstNum > 10) {\n          clearAll();\n          return \"Error\";\n        } else {\n          result = _operations_factorialize_js__WEBPACK_IMPORTED_MODULE_8___default()(firstNum);\n        }\n        firstNum = result;\n        return display.textContent = firstNum;\n      default:\n        break;\n    }\n  };\n\n  // setting restriction for clicking not a button\n  if (!event.target.matches(\".buttons__operation, .buttons__numbers, .buttons__memory, .buttons__exponentiation, .buttons__root, .buttons__degree\")) return;\n\n  // clearing the display and store on AC btn\n  if (event.target.dataset.clear) {\n    return clearAll();\n  }\n\n  // deleting previous character on C btn\n  if (event.target.dataset.deleteprev) {\n    return deletePreviousSymbol();\n  }\n\n  // storing and displaying the numbers\n  if (event.target.classList.contains(\"buttons__numbers\")) {\n    if (!secondNum && !operator) {\n      if (isNegative && firstNum === \"\") {\n        firstNum = \"-\" + event.target.textContent;\n      } else {\n        !firstNum || firstNum === '0' || firstNum === 0 || result === 0 ? firstNum = event.target.textContent : firstNum += event.target.textContent;\n      }\n    } else {\n      secondNum += event.target.textContent;\n    }\n  }\n\n  // operators\n  if (event.target.classList.contains(\"buttons__operation\")) {\n    // checking empty operators\n    if (!firstNum && event.target.textContent !== \"-\") {\n      return \"\";\n    }\n\n    // setting isNegative after clicling -\n    if (event.target.textContent === \"-\" && !firstNum) {\n      isNegative = true;\n      return;\n    }\n\n    // calculation\n    if (secondNum && operator && !event.target.dataset.deleteprev) {\n      firstNum = result;\n      secondNum = \"\";\n      isNegative = false;\n      if (event.target.textContent === \"=\") {\n        operator = \"\";\n        return display.textContent = firstNum;\n      }\n    }\n    if (event.target.dataset.devidex) {\n      result = _operations_oneDevideX_js__WEBPACK_IMPORTED_MODULE_6___default()(firstNum);\n      firstNum = result;\n      return display.textContent = firstNum;\n    }\n    if (event.target.dataset.percents) {\n      result = _operations_calcPercents_js__WEBPACK_IMPORTED_MODULE_7___default()(firstNum);\n      firstNum = result;\n      return display.textContent = firstNum;\n    }\n\n    // change sign\n    if (event.target.dataset.changesign) {\n      if (result < 0) {\n        result = result.toString();\n        result = result.slice(1);\n        firstNum = result;\n        display.textContent = result;\n        return firstNum;\n      } else if (result > 0) {\n        result = result.toString();\n        isNegative = true;\n        firstNum = \"-\" + result;\n        return display.textContent = firstNum;\n      } else if (firstNum && !isNegative) {\n        isNegative = true;\n        firstNum = \"-\" + firstNum;\n      } else if (firstNum && isNegative) {\n        isNegative = false;\n        result = result.toString();\n        firstNum = firstNum.slice(1);\n      }\n      return display.textContent = firstNum;\n    }\n    operator = event.target.textContent;\n  }\n  if (event.target.classList.contains(\"buttons__exponentiation\")) {\n    if (!firstNum) {\n      clearAll();\n      return display.textContent = \"Error\";\n    }\n    if (event.target.dataset.square) {\n      result = _exponentiation_square_js__WEBPACK_IMPORTED_MODULE_12___default()(firstNum);\n    }\n    if (event.target.dataset.third) {\n      result = _exponentiation_thirdExponentiation_js__WEBPACK_IMPORTED_MODULE_13___default()(firstNum);\n    }\n    if (event.target.dataset.tenth) {\n      result = _exponentiation_tenthExponentiation_js__WEBPACK_IMPORTED_MODULE_14___default()(firstNum);\n    }\n    firstNum = result;\n    console.log(firstNum);\n    return display.textContent = firstNum;\n  }\n  if (event.target.classList.contains(\"buttons__root\")) {\n    if (isNegative || !firstNum || firstNum < 0) {\n      clearAll();\n      return display.textContent = \"Error\";\n    }\n    if (event.target.dataset.rootsqr) {\n      result = _roots_sqrRoot_js__WEBPACK_IMPORTED_MODULE_9___default()(firstNum);\n    }\n    if (event.target.dataset.rootcube) {\n      result = _roots_cubeRoot_js__WEBPACK_IMPORTED_MODULE_10___default()(firstNum);\n    }\n    firstNum = result;\n    return display.textContent = firstNum;\n  }\n  if (event.target.dataset.rooty) {\n    return operator = event.target.dataset.rooty;\n  }\n  if (event.target.classList.contains(\"buttons__memory\")) {\n    memoryOperation(event.target.textContent);\n  }\n  display.textContent = firstNum + operator + secondNum;\n  complexOpeartions();\n});\n\n//# sourceURL=webpack://calculator/./src/index.js?");
+
+/***/ }),
+
+/***/ "./src/operations/add.js":
+/*!*******************************!*\
+  !*** ./src/operations/add.js ***!
+  \*******************************/
+/***/ ((module) => {
+
+eval("const add = (firstVal, secondVal) => {\n  return parseFloat(firstVal) + parseFloat(secondVal);\n};\nmodule.exports = add;\n\n//# sourceURL=webpack://calculator/./src/operations/add.js?");
+
+/***/ }),
+
+/***/ "./src/operations/calcPercents.js":
+/*!****************************************!*\
+  !*** ./src/operations/calcPercents.js ***!
+  \****************************************/
+/***/ ((module) => {
+
+eval("const calcPercents = firstNum => {\n  firstNum = firstNum / 100;\n  return firstNum;\n};\nmodule.exports = calcPercents;\n\n//# sourceURL=webpack://calculator/./src/operations/calcPercents.js?");
+
+/***/ }),
+
+/***/ "./src/operations/devide.js":
+/*!**********************************!*\
+  !*** ./src/operations/devide.js ***!
+  \**********************************/
+/***/ ((module) => {
+
+eval("const devide = (firstNum, secondNum) => {\n  if (secondNum === \"0\") {\n    return \"Error\";\n  } else {\n    return parseFloat(firstNum) / parseFloat(secondNum);\n  }\n};\nmodule.exports = devide;\n\n//# sourceURL=webpack://calculator/./src/operations/devide.js?");
+
+/***/ }),
+
+/***/ "./src/operations/factorialize.js":
+/*!****************************************!*\
+  !*** ./src/operations/factorialize.js ***!
+  \****************************************/
+/***/ ((module) => {
+
+eval("const factorialize = firstNum => {\n  if (!firstNum || firstNum === \"0\" || firstNum === 0 || firstNum === 1) {\n    firstNum = 1;\n  } else if (firstNum < 0) {\n    firstNum = 'Error';\n  } else {\n    for (let i = firstNum - 1; i >= 1; i--) {\n      firstNum *= i;\n    }\n  }\n  return firstNum;\n  ;\n};\nmodule.exports = factorialize;\n\n//# sourceURL=webpack://calculator/./src/operations/factorialize.js?");
+
+/***/ }),
+
+/***/ "./src/operations/multiply.js":
+/*!************************************!*\
+  !*** ./src/operations/multiply.js ***!
+  \************************************/
+/***/ ((module) => {
+
+eval("const multiply = (firstVal, secondVal) => {\n  return parseFloat(firstVal) * parseFloat(secondVal);\n};\nmodule.exports = multiply;\n\n//# sourceURL=webpack://calculator/./src/operations/multiply.js?");
+
+/***/ }),
+
+/***/ "./src/operations/oneDevideX.js":
+/*!**************************************!*\
+  !*** ./src/operations/oneDevideX.js ***!
+  \**************************************/
+/***/ ((module) => {
+
+eval("const oneDevideX = firstNum => {\n  return 1 / parseFloat(firstNum);\n};\nmodule.exports = oneDevideX;\n\n//# sourceURL=webpack://calculator/./src/operations/oneDevideX.js?");
+
+/***/ }),
+
+/***/ "./src/operations/subtract.js":
+/*!************************************!*\
+  !*** ./src/operations/subtract.js ***!
+  \************************************/
+/***/ ((module) => {
+
+eval("const subtract = (firstVal, secondVal) => {\n  return parseFloat(firstVal) - parseFloat(secondVal);\n};\nmodule.exports = subtract;\n\n//# sourceURL=webpack://calculator/./src/operations/subtract.js?");
+
+/***/ }),
+
+/***/ "./src/roots/cubeRoot.js":
+/*!*******************************!*\
+  !*** ./src/roots/cubeRoot.js ***!
+  \*******************************/
+/***/ ((module) => {
+
+eval("const cubeRoot = firstNum => {\n  console.log(firstNum);\n  if (typeof firstNum === \"number\") {\n    return firstNum ** (1 / 3);\n  } else {\n    return parseFloat(firstNum) ** (1 / 3);\n  }\n};\nmodule.exports = cubeRoot;\n\n//# sourceURL=webpack://calculator/./src/roots/cubeRoot.js?");
+
+/***/ }),
+
+/***/ "./src/roots/rootY.js":
+/*!****************************!*\
+  !*** ./src/roots/rootY.js ***!
+  \****************************/
+/***/ ((module) => {
+
+eval("const rootY = (firstNum, secondNum) => {\n  return parseFloat(firstNum) ** (1 / parseFloat(secondNum));\n};\nmodule.exports = rootY;\n\n//# sourceURL=webpack://calculator/./src/roots/rootY.js?");
+
+/***/ }),
+
+/***/ "./src/roots/sqrRoot.js":
+/*!******************************!*\
+  !*** ./src/roots/sqrRoot.js ***!
+  \******************************/
+/***/ ((module) => {
+
+eval("const sqrRoot = firstNum => {\n  if (typeof firstNum === \"number\") {\n    return firstNum ** 0.5;\n  } else {\n    return parseInt(firstNum) ** 0.5;\n  }\n};\nmodule.exports = sqrRoot;\n\n//# sourceURL=webpack://calculator/./src/roots/sqrRoot.js?");
 
 /***/ }),
 
@@ -26,7 +166,7 @@ eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _sty
   \**********************/
 /***/ (() => {
 
-eval("\n\n//# sourceURL=webpack://calculator/./src/theme.js?");
+eval("const setTheme = themeName => {\n  localStorage.setItem(\"theme\", themeName);\n  document.documentElement.className = themeName;\n};\nconst switcher = document.querySelector(\".switch\");\nconst toogleTheme = () => {\n  if (localStorage.getItem(\"theme\") === \"theme-dark\") {\n    setTheme(\"theme-light\");\n  } else {\n    setTheme(\"theme-dark\");\n  }\n};\nswitcher.addEventListener(\"click\", () => {\n  toogleTheme();\n});\n(function () {\n  if (localStorage.getItem(\"theme\") === \"theme-dark\") {\n    setTheme(\"theme-dark\");\n  } else {\n    setTheme(\"theme-light\");\n  }\n})();\n\n//# sourceURL=webpack://calculator/./src/theme.js?");
 
 /***/ }),
 
@@ -37,7 +177,7 @@ eval("\n\n//# sourceURL=webpack://calculator/./src/theme.js?");
 /***/ ((module, __webpack_exports__, __webpack_require__) => {
 
 "use strict";
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"default\": () => (__WEBPACK_DEFAULT_EXPORT__)\n/* harmony export */ });\n/* harmony import */ var _node_modules_css_loader_dist_runtime_noSourceMaps_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../node_modules/css-loader/dist/runtime/noSourceMaps.js */ \"./node_modules/css-loader/dist/runtime/noSourceMaps.js\");\n/* harmony import */ var _node_modules_css_loader_dist_runtime_noSourceMaps_js__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_node_modules_css_loader_dist_runtime_noSourceMaps_js__WEBPACK_IMPORTED_MODULE_0__);\n/* harmony import */ var _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../node_modules/css-loader/dist/runtime/api.js */ \"./node_modules/css-loader/dist/runtime/api.js\");\n/* harmony import */ var _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(_node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_1__);\n// Imports\n\n\nvar ___CSS_LOADER_EXPORT___ = _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_1___default()((_node_modules_css_loader_dist_runtime_noSourceMaps_js__WEBPACK_IMPORTED_MODULE_0___default()));\n// Module\n___CSS_LOADER_EXPORT___.push([module.id, ``, \"\"]);\n// Exports\n/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (___CSS_LOADER_EXPORT___);\n\n\n//# sourceURL=webpack://calculator/./src/styles.css?./node_modules/css-loader/dist/cjs.js");
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"default\": () => (__WEBPACK_DEFAULT_EXPORT__)\n/* harmony export */ });\n/* harmony import */ var _node_modules_css_loader_dist_runtime_noSourceMaps_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../node_modules/css-loader/dist/runtime/noSourceMaps.js */ \"./node_modules/css-loader/dist/runtime/noSourceMaps.js\");\n/* harmony import */ var _node_modules_css_loader_dist_runtime_noSourceMaps_js__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_node_modules_css_loader_dist_runtime_noSourceMaps_js__WEBPACK_IMPORTED_MODULE_0__);\n/* harmony import */ var _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../node_modules/css-loader/dist/runtime/api.js */ \"./node_modules/css-loader/dist/runtime/api.js\");\n/* harmony import */ var _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(_node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_1__);\n// Imports\n\n\nvar ___CSS_LOADER_EXPORT___ = _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_1___default()((_node_modules_css_loader_dist_runtime_noSourceMaps_js__WEBPACK_IMPORTED_MODULE_0___default()));\n// Module\n___CSS_LOADER_EXPORT___.push([module.id, `body {\r\n    font-family: \"Roboto\", sans-serif;\r\n    background-color: var(--body-background-color);\r\n    display: flex;\r\n    align-items: center;\r\n    height: 100vh;\r\n    margin: 0;\r\n}\r\n\r\n.theme-light {\r\n    --body-background-color: #f9f5eb;\r\n    --background-color: #fbfdfe;\r\n    --font-displayColor: #33393d;\r\n}\r\n.theme-dark {\r\n    --body-background-color: #606f76;\r\n    --background-color: black;\r\n    --font-displayColor: aliceblue;\r\n}\r\n\r\n.container {\r\n    max-width: 480px;\r\n    width: 100%;\r\n    background-color: var(--background-color);\r\n    padding: 10px;\r\n    margin: auto;\r\n    border-radius: 10px;\r\n    -webkit-box-shadow: 0px 5px 30px 2px rgba(34, 60, 80, 0.57);\r\n    -moz-box-shadow: 0px 5px 30px 2px rgba(34, 60, 80, 0.57);\r\n    box-shadow: 0px 5px 30px 2px rgba(34, 60, 80, 0.57);\r\n}\r\n\r\n.display {\r\n    width: 90%;\r\n    margin: auto;\r\n    height: 100px;\r\n    display: flex;\r\n    align-items: center;\r\n    font-size: 30px;\r\n    border-radius: 10px;\r\n    color: var(--font-displayColor);\r\n}\r\n\r\n.buttons {\r\n    display: flex;\r\n    gap: 15px;\r\n    width: 100%;\r\n    justify-content: center;\r\n}\r\n\r\n.numbers {\r\n    display: grid;\r\n    grid-template-columns: repeat(3, 1fr);\r\n    gap: 5px;\r\n}\r\n\r\n.operations {\r\n    display: grid;\r\n    grid-template-columns: repeat(5, 1fr);\r\n    gap: 5px;\r\n}\r\n\r\n.buttons__xy {\r\n    display: flex;\r\n}\r\n\r\n.buttons__numbers,\r\n.buttons__operation,\r\n.buttons__clear,\r\n.buttons__memory,\r\n.buttons__root,\r\n.buttons__exponentiation {\r\n    border: 0;\r\n    height: 50px;\r\n    width: 50px;\r\n    border-radius: 100%;\r\n    background-color: #33393d;\r\n    color: aliceblue;\r\n    -webkit-box-shadow: 0px 5px 10px 2px rgba(34, 60, 80, 0.2);\r\n    -moz-box-shadow: 0px 5px 10px 2px rgba(34, 60, 80, 0.2);\r\n    box-shadow: 0px 5px 10px 2px rgba(34, 60, 80, 0.2);\r\n}\r\n\r\n.switch {\r\n    background-color: var(--background-color);\r\n    border: 0;\r\n    border-radius: 10px;\r\n    color: var(--font-displayColor);\r\n}\r\n\r\n.operation {\r\n    background-color: orange;\r\n}\r\n\r\n.memory {\r\n    background-color: gray;\r\n}\r\n\r\n.y {\r\n    font-size: 8px;\r\n}`, \"\"]);\n// Exports\n/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (___CSS_LOADER_EXPORT___);\n\n\n//# sourceURL=webpack://calculator/./src/styles.css?./node_modules/css-loader/dist/cjs.js");
 
 /***/ }),
 

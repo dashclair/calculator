@@ -3,3 +3,4 @@
 /babel.config.json
 /webpack.config.js
 /package-lock.json
+/jest.config.js
