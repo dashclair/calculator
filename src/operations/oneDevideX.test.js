@@ -1,4 +1,4 @@
-import oneDevideX from "./oneDevideX";
+const oneDevideX = require("./oneDevideX");
 
 describe("деление 1 на х", () => {
     it("деление на положительное число", () => {

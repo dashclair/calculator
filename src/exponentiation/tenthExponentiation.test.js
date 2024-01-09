@@ -1,4 +1,4 @@
-import tenthExponentiation from "./tenthExponentiation";
+const tenthExponentiation = require("./tenthExponentiation");
 
 describe("возведение десяти в степень х", () => {
     it("возведение в положительную степнь", () => {

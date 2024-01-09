@@ -1,4 +1,4 @@
-import thirdExponentiation from "./thirdExponentiation";
+const thirdExponentiation = require("./thirdExponentiation");
 
 describe("возведение в 3 степень х", () => {
     it("возведение в степень положительное число ", () => {

@@ -10,7 +10,7 @@ import factorialize from "./operations/factorialize.js";
 import sqrRoot from "./roots/sqrRoot.js";
 import cubeRoot from "./roots/cubeRoot.js";
 import rootY from "./roots/rootY.js";
-import square from "./exponentiation/square.js";
+import square from "./exponentiation/square.js"
 import thirdExponentiation from "./exponentiation/thirdExponentiation.js";
 import tenthExponentiation from "./exponentiation/tenthExponentiation.js";
 import xyExponentiation from "./exponentiation/xyExponentiation.js";
@@ -85,7 +85,7 @@ const memorySubtract = () => {
         return "";
     }
 
-    if (secondNum !== "") {
+    if (secondNum) {
         memory -= parseFloat(secondNum);
     } else {
         memory -= parseFloat(firstNum);
@@ -162,7 +162,7 @@ buttons.addEventListener("click", (event) => {
     // setting restriction for clicking not a button
     if (
         !event.target.matches(
-            ".buttons__operation, .buttons__numbers, .buttons__memory, .buttons__degree, .buttons__root, .buttons__degree"
+            ".buttons__operation, .buttons__numbers, .buttons__memory, .buttons__exponentiation, .buttons__root, .buttons__degree"
         )
     )
         return;
@@ -179,11 +179,11 @@ buttons.addEventListener("click", (event) => {
 
     // storing and displaying the numbers
     if (event.target.classList.contains("buttons__numbers")) {
-        if (!secondNum && operator === "") {
+        if (!secondNum && !operator) {
             if (isNegative && firstNum === "") {
                 firstNum = "-" + event.target.textContent;
             } else {
-                firstNum === "" || firstNum === 0 || result === 0
+                !firstNum || firstNum === '0' || firstNum === 0 || result === 0
                     ? (firstNum = event.target.textContent)
                     : (firstNum += event.target.textContent);
             }
@@ -196,18 +196,18 @@ buttons.addEventListener("click", (event) => {
     if (event.target.classList.contains("buttons__operation")) {
         
         // checking empty operators
-        if (firstNum === "" && event.target.textContent !== "-") {
+        if (!firstNum && event.target.textContent !== "-") {
             return "";
         }
 
         // setting isNegative after clicling -
-        if (event.target.textContent === "-" && firstNum === "") {
+        if (event.target.textContent === "-" && !firstNum) {
             isNegative = true;
             return;
         }
 
         // calculation
-        if ( secondNum !== "" && operator !== "" && !event.target.dataset.deleteprev ) {
+        if ( secondNum && operator && !event.target.dataset.deleteprev ) {
             firstNum = result;
             secondNum = "";
             isNegative = false;
@@ -257,7 +257,7 @@ buttons.addEventListener("click", (event) => {
         operator = event.target.textContent;
     }
 
-    if (event.target.classList.contains("buttons__degree")) {
+    if (event.target.classList.contains("buttons__exponentiation")) {
         if (!firstNum) {
             clearAll();
             return (display.textContent = "Error");

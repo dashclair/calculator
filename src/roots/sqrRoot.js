@@ -6,4 +6,4 @@ const sqrRoot = (firstNum) => {
     }
 };
 
-export default sqrRoot;
+module.exports = sqrRoot;

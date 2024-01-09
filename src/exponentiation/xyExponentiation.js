@@ -2,4 +2,4 @@ const xyExponentiation = (firstNum, secondNum) => {
     return parseFloat(firstNum) ** secondNum;
 };
 
-export default xyExponentiation;
+module.exports = xyExponentiation;

@@ -1,4 +1,4 @@
-import sqrRoot from "./sqrRoot";
+const sqrRoot = require("./sqrRoot");
 
 describe("корень квадратный", ()=> {
     it("при нахождении корня из положиетльног числа", () => {

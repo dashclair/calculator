@@ -1,4 +1,4 @@
-import rootY from "./rootY";
+const rootY= require("./rootY");
 
 describe("корень y из x", ()=> {
     it("при нахождении корня из положиетльног числа", () => {

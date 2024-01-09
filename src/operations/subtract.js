@@ -3,4 +3,4 @@ const subtract = (firstVal, secondVal) => {
 };
 
 
-export default subtract;
+module.exports = subtract;

@@ -1,4 +1,4 @@
-import square from "./square";
+const square = require('./square')
 
 describe("возведение квадрат", () => {
     it("возведение в степень положиетльного числа", () => {

@@ -7,4 +7,4 @@ const cubeRoot = (firstNum) => {
     }
 };
 
-export default cubeRoot;
+module.exports = cubeRoot;

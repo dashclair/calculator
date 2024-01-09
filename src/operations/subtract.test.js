@@ -1,4 +1,4 @@
-import subtract from "./subtract";
+const subtract = require("./subtract");
 
 describe("вычитание", () => {
     it("вычитание из двух положительных чисел и из большего меньшее", () => {

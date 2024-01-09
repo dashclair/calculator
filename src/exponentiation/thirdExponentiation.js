@@ -6,4 +6,4 @@ const thirdExponentiation = (firstNum) => {
     return parseFloat(firstNum) ** 3;
 };
 
-export default thirdExponentiation;
+module.exports = thirdExponentiation;

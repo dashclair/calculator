@@ -1,4 +1,4 @@
-import devide from "./devide";
+const devide = require("./devide");
 
 describe("devision", () => {
     it("должно правильно выполнять деление положительных чисел", () => {

@@ -6,4 +6,4 @@ const devide = (firstNum, secondNum) => {
     }
 };
 
-export default devide;
+module.exports = devide;

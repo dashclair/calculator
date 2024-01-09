@@ -1,4 +1,4 @@
-import multiply from "./multiply";
+const multiply = require("./multiply");
 
 describe("умножение", () => {
     it("умножение двух положительных значений дает положительный резульата", () => {

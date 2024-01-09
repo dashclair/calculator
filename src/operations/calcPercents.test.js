@@ -1,4 +1,4 @@
-import calcPercents from "./calcPercents";
+const calcPercents = require("./calcPercents");
 
 describe("процент", ()=> {
     it("при положительном числе", () => {

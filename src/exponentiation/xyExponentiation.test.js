@@ -1,4 +1,4 @@
-import xyExponentiation from "./xyExponentiation";
+const xyExponentiation = require("./xyExponentiation");
 
 describe("возведение числа х в степень у", () => {
     it("возведение в степень положительное число ", () => {
