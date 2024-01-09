@@ -1,5 +1,6 @@
 const calcPercents = (firstNum) => {
-    return firstNum / 100;
+    firstNum = firstNum / 100;
+    return firstNum
 };
 
 module.exports = calcPercents;

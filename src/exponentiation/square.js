@@ -1,6 +1,5 @@
 const square = (firstNum) => {
-
-    return parseFloat(firstNum) ** 2;
+    return parseFloat(firstNum) ** 2
 }
 
 module.exports = square;

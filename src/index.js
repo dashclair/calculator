@@ -276,7 +276,6 @@ buttons.addEventListener("click", (event) => {
         }
 
         firstNum = result;
-        console.log(firstNum);
         return (display.textContent = firstNum);
     }
 

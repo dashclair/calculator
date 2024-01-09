@@ -1,9 +1,10 @@
 const thirdExponentiation = (firstNum) => {
-    if(typeof firstNum === 'number') {
-        console.log('firstNum',firstNum)
-        return firstNum ** 3
+    if (typeof firstNum === "number") {
+        return firstNum ** 3;
     }
-    return parseFloat(firstNum) ** 3;
+
+    firstNum = parseFloat(firstNum) ** 3;
+    return firstNum;
 };
 
 module.exports = thirdExponentiation;

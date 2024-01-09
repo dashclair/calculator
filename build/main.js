@@ -15,7 +15,7 @@
   \**************************************/
 /***/ ((module) => {
 
-eval("const square = firstNum => {\n  return parseFloat(firstNum) ** 2;\n};\nmodule.exports = square;\n\n//# sourceURL=webpack://calculator/./src/exponentiation/square.js?");
+eval("const square = firstNum => {\n  console.log(firstNum);\n  return parseFloat(firstNum) ** 2;\n};\nmodule.exports = square;\n\n//# sourceURL=webpack://calculator/./src/exponentiation/square.js?");
 
 /***/ }),
 
@@ -35,7 +35,7 @@ eval("const tenthExponentiation = firstNum => {\n  return 10 ** parseFloat(first
   \***************************************************/
 /***/ ((module) => {
 
-eval("const thirdExponentiation = firstNum => {\n  if (typeof firstNum === 'number') {\n    console.log('firstNum', firstNum);\n    return firstNum ** 3;\n  }\n  return parseFloat(firstNum) ** 3;\n};\nmodule.exports = thirdExponentiation;\n\n//# sourceURL=webpack://calculator/./src/exponentiation/thirdExponentiation.js?");
+eval("const thirdExponentiation = firstNum => {\n  if (typeof firstNum === \"number\") {\n    firstNum = firstNum ** 3;\n    return firstNum;\n  }\n  firstNum = parseFloat(firstNum) ** 3;\n  return firstNum;\n};\nmodule.exports = thirdExponentiation;\n\n//# sourceURL=webpack://calculator/./src/exponentiation/thirdExponentiation.js?");
 
 /***/ }),
 
@@ -66,7 +66,7 @@ eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _sty
   \*******************************/
 /***/ ((module) => {
 
-eval("const add = (firstVal, secondVal) => {\n  console.log(firstVal);\n  return parseFloat(firstVal) + parseFloat(secondVal);\n};\nmodule.exports = add;\n\n//# sourceURL=webpack://calculator/./src/operations/add.js?");
+eval("const add = (firstVal, secondVal) => {\n  return parseFloat(firstVal) + parseFloat(secondVal);\n};\nmodule.exports = add;\n\n//# sourceURL=webpack://calculator/./src/operations/add.js?");
 
 /***/ }),
 
@@ -76,7 +76,7 @@ eval("const add = (firstVal, secondVal) => {\n  console.log(firstVal);\n  return
   \****************************************/
 /***/ ((module) => {
 
-eval("const calcPercents = firstNum => {\n  return firstNum / 100;\n};\nmodule.exports = calcPercents;\n\n//# sourceURL=webpack://calculator/./src/operations/calcPercents.js?");
+eval("const calcPercents = firstNum => {\n  firstNum = firstNum / 100;\n  return firstNum;\n};\nmodule.exports = calcPercents;\n\n//# sourceURL=webpack://calculator/./src/operations/calcPercents.js?");
 
 /***/ }),
 
