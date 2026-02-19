@@ -6,6 +6,47 @@
     <title>Calculator</title>
 </head>
 <body>
-   
+    <div class="container">
+        <button class="switch">&#9728</button>
+        <div class="display" data-display></div>
+        <div class="buttons">
+            <div class="numbers">
+                <button class="buttons__numbers" >1</button>
+                <button class="buttons__numbers" >2</button>
+                <button class="buttons__numbers" >3</button>
+                <button class="buttons__numbers" >4</button>
+                <button class="buttons__numbers" >5</button>
+                <button class="buttons__numbers" >6</button>
+                <button class="buttons__numbers" >7</button>
+                <button class="buttons__numbers" >8</button>
+                <button class="buttons__numbers" >9</button>
+                <button class="buttons__numbers" >0</button>
+                <button class="buttons__operation">=</button>
+                <button class="buttons__operation operation" data-deleteprev="c">C</button>
+            </div>
+            <div class="operations">
+                <button class="buttons__operation operation" data-clear="clear">AC</button>
+                <button class="buttons__memory memory" data-memoryclear="clear">MC</button>
+                <button class="buttons__memory memory" data-memoryAdd="m+">M+</button>
+                <button class="buttons__memory memory" data-memorySubtrac="m-">M-</button>
+                <button class="buttons__memory memory" data-memoryRecall="mr">MR</button>
+                <button class="buttons__operation operation">+</button>
+                <button class="buttons__operation operation">-</button>
+                <button class="buttons__operation operation">x</button>
+                <button class="buttons__operation operation">/</button>
+                <button class="buttons__operation operation" data-devidex="root-devidex">1/x</button>
+                <button class="buttons__operation operation" data-changesign="-/+"> -/+ </button>
+                <button class="buttons__exponentiation operation" data-square="x2">x<sup>2</sup></button>
+                <button class="buttons__exponentiation operation" data-third="x3">x<sup>3</sup></button>
+                <button class="buttons__exponentiation operation" data-tenth="10x">10<sup>x</sup></button>
+                <button class="buttons__operation operation" data-ydegree="xy">x<sup>y</sup></button>
+                <button class="buttons__operation operation" data-percents="%">%</button>
+                <button class="buttons__operation operation">x!</button>
+                <button class="buttons__root operation" data-rootsqr="root">&#8730</button>
+                <button class="buttons__root operation" data-rootcube="root-cube">&#8731</button>
+                <button class="buttons__operation operation" data-rooty="root y"><sup class="y">y</sup>&#8730</button>
+            </div>
+        </div>
+    </div>
 </body>
 </html>
